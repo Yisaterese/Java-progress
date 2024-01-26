@@ -6,20 +6,25 @@ public class AmstrongNumbers{
 		Scanner input = new Scanner(System.in);
 
 		System.out.println("Enter number: ");
-		String numberStr = input.nextLine();
-	
-		for(int counter = 0; counter  <=  numberStr.length(); counter++){
-			char pickChar = numberStr.charAt(counter);
-			numberStr(counter) *= numberStri.length();
-			int numericValues = Character.getNumericValues(numberStr);
+		int number= input.nextInt();
+		String strNumber = "" + number;
 
-			
-			counter = counter * 3 ;
-			number *= counter;
+		int result = 0;		
+
+		for(int counter = 0; counter  <  strNumber.length(); counter++){
+
+			char pickChar =  strNumber.charAt(counter);
+			int numericValues = Character.getNumericValue(pickChar);
+
+			result += (int)Math.pow( numericValues,strNumber.length() );
+	
 			 
-			System.out.printf("%d %n",number  );
+			System.out.printf("%d %n",numericValues );
 		}
-		
+		if( number == result){
+				System.out.print("number is amstrong");
+			}
+			
 	}
 
 }
