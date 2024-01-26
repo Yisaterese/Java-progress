@@ -1,0 +1,12 @@
+public class SumOfNumbers{
+
+	public static int  sumOfNumbers(int number){
+		sumNumbers = 0;
+		for(int counter = 1; counter <=  number; counter++){
+			if(number % 3 == 0){
+				sumNumbers += counter;
+			}				
+		}
+	return sumNumbers;
+	}
+}
